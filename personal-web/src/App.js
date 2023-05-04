@@ -15,8 +15,11 @@ function App() {
           <li><a href="#education" onClick={() => scrollToSection("education")}>Education</a></li>
         </ul>
       </nav>
-    </div>
-    <section id="about-me">
+        <div className="intro">
+          Hi. I'm Akanksh
+        </div>
+
+        <section id="about-me">
         <h2>About Me</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut purus in lacus consequat tristique vel et nisl. Nam et suscipit felis. Donec viverra, est ut dictum blandit, sapien magna faucibus nisi, sed faucibus nisl elit id mauris.</p>
       </section>
@@ -30,6 +33,7 @@ function App() {
         <h2>Education</h2>
         <p>Etiam eget nibh vel velit ullamcorper pretium vel sit amet velit. Nullam porttitor sapien vel arcu mollis hendrerit. Nunc sed neque id est dictum sollicitudin vel vel lacus. In ut erat in quam interdum pulvinar non ut velit.</p>
       </section>
+    </div>
     </div>
     
   );
