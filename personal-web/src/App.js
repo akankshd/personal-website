@@ -59,8 +59,8 @@ function App() {
             <FontAwesomeIcon icon={faLinkedinIn} />
 
           </a>
-
         </div>
+
         {/* <img src="akanksh.jpg" alt="Your Name" /> */}
       </div>
     

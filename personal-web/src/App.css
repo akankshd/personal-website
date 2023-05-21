@@ -15,7 +15,7 @@ nav ul {
   text-align: center;
 }
 body {
-  background-color: #000000; /* Set the desired background color */
+  background-color: #000000; 
 }
 
 
@@ -62,7 +62,7 @@ nav a:hover:after {
 
 nav a:hover {
   text-decoration: underline;
-  color: #6507ca; /* Change the color to red (or any other desired color) on hover */
+  color: rgb(241, 187, 36); /* Change the color to red (or any other desired color) on hover */
 }
 
 
@@ -84,13 +84,15 @@ nav a:hover {
   min-height: 100vh; /* Ensures the div takes up the full viewport height */
   overflow: hidden;
 }
+
 .textIntro {
   font-size: 70px;
-  text-align: center; /* Add text-align property to center the text */
+  text-align: center;
   padding-left: 20px;
   padding-bottom: 0px;
   animation: colorChange 5s infinite;
-}
+  font-family: "mario", sans-serif;
+  }
 
 .textIntro span {
   color: #ab47bc; /* Dark purple color */
@@ -123,18 +125,16 @@ nav a:hover {
     color: #F9F4DB; /* Transition to a lighter shade of gold */
   }
   70% {
-    color: #dea08b; /* Transition to a lighter shade of gold */
+    color: #DEA08B; /* Transition to a lighter shade of gold */
   }
   80% {
-    color: #dfa270; /* Transition to a lighter shade of gold */
+    color: #DFA270; /* Transition to a lighter shade of gold */
   }
   100% {
     color: #FFD700; /* Transition back to light gold */
   }
-
-
-
 }
+
 
 @keyframes fadeIn {
   from {
@@ -151,7 +151,6 @@ nav a:hover {
   margin-top: 10px;
   padding-top: 0px;
   padding-bottom: 20px;
-
 }
 
 .social-icons a {
@@ -160,7 +159,6 @@ nav a:hover {
   justify-content: center;
   width: 42px;
   height: 42px;
-  border-radius: 50%;
   margin-right: 10px;
   background-color: #90604f;
   color: #000000;
@@ -170,9 +168,39 @@ nav a:hover {
 .social-icons a:hover {
   background-color: #FBD000;
   color: #90604f;
-;
+  animation: jump 0.3s ease-in-out;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .social-icons a:last-child {
   margin-right: 0;
+}
+
+
+
+@font-face {
+  font-family: 'mario';
+  src: url('fonts/mario2.ttf')
+  /* Add more src declarations for different font formats if needed */
 }
