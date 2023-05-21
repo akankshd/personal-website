@@ -24,6 +24,7 @@ nav li {
   margin-right: 50px; 
   padding-right: 10 20px;
   font-weight: bold;
+  font-family: "mario", sans-serif;
 }
 
 nav li:last-child {
@@ -61,7 +62,7 @@ nav a:hover:after {
 }
 
 nav a:hover {
-  text-decoration: underline;
+  
   color: rgb(241, 187, 36); /* Change the color to red (or any other desired color) on hover */
 }
 
@@ -86,7 +87,7 @@ nav a:hover {
 }
 
 .textIntro {
-  font-size: 70px;
+  font-size: 90px;
   text-align: center;
   padding-left: 20px;
   padding-bottom: 0px;
@@ -201,6 +202,6 @@ nav a:hover {
 
 @font-face {
   font-family: 'mario';
-  src: url('fonts/mario2.ttf')
+  src: url('fonts/mario3.ttf')
   /* Add more src declarations for different font formats if needed */
 }
