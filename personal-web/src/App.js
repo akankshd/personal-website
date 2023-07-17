@@ -2,7 +2,7 @@ import './App.css';
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-scroll"; // enables smooth scrolling for user <link> component
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // 
-import { faInstagram, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faTwitter, faLinkedinIn, faGithub} from '@fortawesome/free-brands-svg-icons';
 
 
 
@@ -49,10 +49,9 @@ function App() {
           <FontAwesomeIcon icon={faGithub} />
         </a>
         </div>
-
+        <button class="resume-button">Resume</button>
         {/* <img src="akanksh.jpg" alt="Your Name" /> */}
       </div>
-
     <div className="container">
 
   {/* creating the boxes here */}
