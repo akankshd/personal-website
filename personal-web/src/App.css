@@ -3,29 +3,32 @@
   top: 0;
   right: 0;
   left: 0;
-  background-color: #020212ed;
   color: rgb(218, 15, 15);
-  padding: 5px;
+  padding: 1vh 5vw; /* Using viewport units for padding */
 }
 
 nav ul {
   list-style: none;
-  margin: 5;
+  margin: 1vh;
   padding: 0;
   text-align: center;
 }
+
+
 body {
   background-color: #020212ed; 
+  overflow-x: hidden;
 }
 
 
 nav li {
   display: inline-block;
-  margin-right: 50px; 
-  padding-right: 10 20px;
+  margin-right: 3vw; /* Using viewport units for margin */
+  padding-right: 1vw 2vw; /* Using viewport units for padding */
   font-weight: bold;
   font-family: "mario", sans-serif;
 }
+
 
 nav li:last-child {
   margin-right: 0;
@@ -38,25 +41,22 @@ nav a {
 }
 
 section {
-  background-color: #020212ed; 
-  padding: 40px;
-  margin-bottom: 40px; 
-  border-radius: 10px; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  background-color: #ffffffed;
+  padding: 2vh;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav a:after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -2px;
+  bottom: -0.2vh; /* Using viewport units for bottom position */
   width: 100%;
-  height: 2px;
-  background-color: rgb(241, 187, 36);
+  height: 0.2vh; /* Using viewport units for height */
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease-in-out;
-} 
+}
 nav a:hover:after {
   transform: scaleX(1);
 }
@@ -84,28 +84,31 @@ nav a:hover {
   padding-top: 50px;
   color: red;
 }
+
 .intro {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding-top: 40px; 
+  justify-content: top;
+  padding-top: 150px; 
+  /* padding-bottom: 180px; */
   color: rgb(255, 255, 255);
-  background-image: url("mario-gif.gif");
+  background-image: url("city4.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh; 
-  overflow: hidden;
+  
 }
 
 .textIntro {
-  font-size: 79px;
+  font-size: 100px;
   text-align: center;
   padding-left: 20px;
+  margin-bottom: 33px;
   padding-bottom: 0px;
-  animation: colorChange 5s infinite;
-  font-family: "mario", sans-serif;
+  animation: colorChange 6s infinite;
+  font-family: "SF", sans-serif;
   }
 
 .textIntro span {
@@ -115,39 +118,24 @@ nav a:hover {
 .textIntro:hover span {
   color: #8e24aa; 
 }
-
 @keyframes colorChange {
   0% {
-    color: #FFD700; 
+    color: #6C5B7B; 
   }
-  10% {
-    color: #FFDF00;
-  }
-  20% {
-    color: #FFE900;
-  }
-  30% {
-    color: #FFF300;
-  }
-  40% {
-    color: #FDFC85; 
+  25% {
+    color: #9A8BCC;
   }
   50% {
-    color: #FBF8B2; 
+    color: #55CBCD;
   }
-  60% {
-    color: #F9F4DB; 
-  }
-  70% {
-    color: #DEA08B; 
-  }
-  80% {
-    color: #DFA270;
+  75% {
+    color: #5E7A7F;
   }
   100% {
-    color: #FFD700;
+    color: #6C5B7B;
   }
 }
+
 
 
 @keyframes fadeIn {
@@ -174,13 +162,15 @@ nav a:hover {
   width: 42px;
   height: 42px;
   margin-right: 10px;
-  background-color: #90604f;
+  border-radius: 5px;
+  background-color: #5858d5;
   color: #000000;
   transition: background-color 0.3s ease-in-out;
 }
 
 .social-icons a:hover {
-  background-color: #FBD000;
+  background-color: #00b3ff;
+  /* FBD000 */
   color: #90604f;
   animation: jump 0.3s ease-in-out;
 }
@@ -215,17 +205,17 @@ nav a:hover {
 
 @font-face {
   font-family: 'mario';
-  src: url('fonts/mario4.ttf')
+  src: url('fonts/mario3.ttf')
 }
 @font-face {
-  font-family: 'mario2';
-  src: url('fonts/mario3.ttf')
+  font-family: 'SF';
+  src: url('fonts/SF\ Hollywood\ Hills.ttf')
 }
 
 
 
 .header nav ul li {
-  font-family: 'mario2', Arial, sans-serif; /* Custom font for the header */
+  font-family: 'mario', Arial, sans-serif; /* Custom font for the header */
 }
 
 .about-me {
@@ -250,27 +240,45 @@ nav a:hover {
   padding: 0 20px;
 }
 
+
+/* Media query for screens with a maximum width of 768px */
+@media (min-width: 992px) {
+  .header {
+    padding: 30px;
+    font-size: 24px;
+  }
+}
+
+/* Media query for laptops */
+@media (max-width: 1440px) {
+  .header {
+    padding: 25px;
+    font-size: 20px;
+  }
+}
+
 .my-box {
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
   grid-template-areas: "col1 col2";
   color: #ffffff;
-  background: #020212ed;
+  background: #3d395a;
   position: relative;
   z-index: 1;
   overflow: hidden;
   box-shadow: inset 0px 20px 20px -20px rgba(0, 0, 0, 0.8);
 }
+
 .section-content {
-  background-color: #020212ed;
   padding: 20px;
   border-radius: 10px;
-  width: 180%;
-  height: 700px;
+  width: calc(100vw - 40px); 
+  min-height: 100vh;
   margin: 0 auto;
   font-family: 'spartan'
 }
+
 .section-content {
   display: flex;
   justify-content: center;
@@ -279,15 +287,38 @@ nav a:hover {
 
 .content-wrapper {
   display: flex;
-  gap: 50px; /* Adjust the gap between the text and image */
+  align-items: center; /* Vertically center content */
+  justify-content: center;
 }
 
-.image-wrapper {
-  flex-shrink: 0;
+.text-wrapper {
+  flex: 1;
+  margin-left: 6vmax;
+  font-size: large;
+  align-items: center;
+  
+}
+#about {
+  font-size: 20px;
+}
+
+.image-wrapper img {
+  display: block; 
+  border: 3px solid rgb(255, 255, 255); 
+  border-radius: 10px;
+  margin-right: 10vmin; 
+  margin-left: 130px; 
+  width: 18vmax;
+
+  
+}
+.inside-text{
+  font-size: 60px;
+  color: rgb(150, 157, 228);
 }
 
 img {
-  width: 200px; /* Adjust the image width as needed */
+   /* Adjust the image width as needed */
   height: auto; /* Maintain aspect ratio */
 }
 
@@ -295,21 +326,14 @@ img {
 
 
 ::-webkit-scrollbar {
-  background-color: #020212ed; 
+  background-color: #3d395a; 
 }
 
 
 ::-webkit-scrollbar-thumb {
-  background-color:#020212ed;
+  background-color:#3d395a;
 }
 
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(0, 255, 64);
-}
-.inside-text {
-  font-size: 55px; 
-}
 
 .resume-button {
   padding: 8px 20px;
@@ -329,5 +353,140 @@ img {
 }
 
 .resume-button:hover {
-  background-color: rgb(241, 187, 36); /* Replace with your desired hover background color */
+  background-color: #00b3ff; /* Replace with your desired hover background color */
+}
+
+
+#about-text {
+  font-size: 25px;
+}
+
+.exp {
+  background-color: #040423ed;
+}
+
+.exp-text-wrapper {
+  flex: 1;
+  margin-left: 6vmax;
+  font-size: large;
+  align-items: center;
+  color: #00b3ff;
+}
+
+.role {
+  font-size: 2vmax;
+  font-weight: bold;
+}
+
+.description {
+  color: white;
+  margin-left: 2vmax;
+  margin-right: 5vmax;
+  padding-right: 70px;
+  font-size: 1.4vmax;
+  font-weight: 400;
+  
+}
+
+/* Add other styles here */
+
+.company-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 0.5vmax;
+  font-family: spartan;
+  font-weight: bold;
+  font-size: 1.2vmax;
+}
+
+.company-button.active {
+  background-color: rgb(138, 16, 220)
+}
+
+
+.skills-heading {
+  color: rgb(138, 16, 220)
+}
+
+.description {
+  padding-top: 2.4vmax;
+}
+.role-heading {
+  color: rgb(138, 16, 220)
+}
+.exp-button {
+    padding: 8px 20px;
+    background-color: #0a3b73; /* Replace with your desired background color */
+    color: #ffffff; /* Replace with your desired text color */
+    border: none;
+    border-radius: 5px;
+    font-size: 18px; /* Adjust the value to your desired font size */
+    cursor: pointer;
+    font-family: 'spartan';
+    
+    margin-left: 1.4vmax;
+}
+
+.exp-button:hover {
+  background:#3d395a;
+}
+
+
+.proj {
+  background-color:#4a808a
+}
+
+.proj-heading {
+  text-align: center;
+  margin-bottom: 20px; /* Add spacing below the "Projects" heading */
+  font-size: 25px;
+  color:#000000;
+
+}
+
+.proj-content {
+  padding: 20px;
+  border-radius: 10px;
+  width: calc(100vw - 40px); 
+  min-height: 100vh;
+  margin: 0 auto;
+  font-family: 'spartan';
+}
+
+.project-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.project-box {
+  width: calc(23.33% - 20px);
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+
+#proj-name {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#code {
+  text-align: center;
+}
+.external-link {
+  color: black;
+ 
 }

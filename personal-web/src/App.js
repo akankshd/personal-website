@@ -3,14 +3,14 @@ import React, { useEffect, useState } from 'react';
 import { Link } from "react-scroll"; // enables smooth scrolling for user <link> component
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // 
 import { faInstagram, faTwitter, faLinkedinIn, faGithub} from '@fortawesome/free-brands-svg-icons';
-
-
-
+import ExpSection from './ExpSection'
+import Projects from './Projects'
 function App() {
 
   return (
     <div>
       <div className="header">
+        
         
         <nav>
           <ul>
@@ -20,18 +20,19 @@ function App() {
               </Link>
             </li>
             <li>
-              <Link to="experience" smooth={true} offset={-70} duration={600}>
+              <Link to="exp" smooth={true} offset={0} duration={600}>
                 Experience
               </Link>
             </li>
             <li>
-              <Link to="education" smooth={true} offset={-70} duration={600}>
+              <Link to="proj" smooth={true} offset={0} duration={600}>
                 Projects
               </Link>
             </li>
           </ul>
         </nav>
       </div>
+      
       <div className="intro">
         <h1 className="textIntro">Hi, I'm Akanksh</h1>
         <div className="social-icons">
@@ -49,55 +50,48 @@ function App() {
           <FontAwesomeIcon icon={faGithub} />
         </a>
         </div>
-        <button class="resume-button">Resume</button>
-        {/* <img src="akanksh.jpg" alt="Your Name" /> */}
+        <button class="resume-button" onclick="">
+          <Link to="section my-box" smooth={true} offset={0} duration={600}>
+            explore
+          </Link>
+        </button>
       </div>
+      
     <div className="container">
-
-  {/* creating the boxes here */}
   <section className="section my-box">
-  <div className="section-content">
-    <div className="content-wrapper">
-      <div className="text-wrapper">
-        <h2>About Me</h2>
-        <h1 className="inside-text">Nice to meet you!</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut purus in lacus consequat tristique vel et
-          nisl. Nam et suscipit felis. Donec viverra, est ut dictum blandit, sapien magna faucibus nisi, sed faucibus nisl
-          elit id mauris.
+    <div className="section-content">
+      <div className="content-wrapper">
+        <div className="text-wrapper">
+          <h2 id="about">About Me</h2>
+          <h1 className="inside-text">Nice to meet you!</h1>
+          <p id="about-text">
+            Hello, I'm Akanksh, presently in my second year at the University of California, Riverside. I'm working towards a career in software engineering, with a particular interest in machine learning and its applications in business. My aptitude for problem-solving has been evident from a young age, and every project I take on presents me with fresh challenges to overcome.
+          </p>
+
+        <p id="about-text">
+          Beyond my technical pursuits, I have a passion for photography and exploring new destinations, nurturing my aspiration to eventually experience the world in its entirety.
         </p>
+        <button class="resume-button" onclick="">
+          <Link to="exp" smooth={true} offset={0} duration={600}>
+            check out my experiences! ⬇
+          </Link>
+        </button>
+        </div>
+        <div className="image-wrapper">
+          <img src="akanksh.jpg" alt="Your Image"/>
+        </div>
       </div>
-      <div className="image-wrapper">
-        <img src="your-image.jpg" alt="Your Image" />
-      </div>
-    </div>
   </div>
+    
 </section>
 
+    <ExpSection /> 
+    <Projects />
 
-  <section className="section">
-    <div className="section-content">
-      <h2>Experience</h2>
-      <p>
-        Curabitur semper tellus ac odio suscipit vehicula. Vestibulum id tortor in tellus lacinia rhoncus sed a risus.
-        Sed rutrum augue eu orci bibendum, vel placerat sapien mattis. Vivamus sit amet fringilla nisi.
-      </p>
-    </div>
-  </section>
+  </div>
 
-  <section className="section">
-    <div className="section-content">
-      <h2>Education</h2>
-      <p>
-        Etiam eget nibh vel velit ullamcorper pretium vel sit amet velit. Nullam porttitor sapien vel arcu mollis
-        hendrerit. Nunc sed neque id est dictum sollicitudin vel vel lacus. In ut erat in quam interdum pulvinar non ut
-        velit.
-      </p>
-    </div>
-  </section>
-</div>
-
-    </div>
+  </div>
+    
   );
 }
 
