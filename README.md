@@ -1,4 +1,4 @@
-# porfolio 
+# code for portfolio website
+portfolio for akanskh suhas divyananda
+
 akankshd.com
-adivy001@ucr.edu for inquiries
- 
