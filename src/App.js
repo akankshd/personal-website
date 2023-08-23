@@ -5,14 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; //
 import { faInstagram, faTwitter, faLinkedinIn, faGithub} from '@fortawesome/free-brands-svg-icons';
 import ExpSection from './ExpSection'
 import Projects from './Projects'
+import { Helmet } from "react-helmet";
 function App() {
 
   return (
     <div>
       <div className="header">
-        
-        
         <nav>
+        <Helmet><title>Akanksh</title>
+        </Helmet>
           <ul>
             <li>
               <Link to="section my-box" smooth={true} offset={0} duration={600}>
