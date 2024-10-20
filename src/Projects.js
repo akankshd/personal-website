@@ -1,13 +1,15 @@
 import React from 'react';
 import { faGithub} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // 
+import { Link } from "react-scroll"; // enables smooth scrolling for user <link> component
+
 const Projects = () => {
   return (
     
     <section className="proj">
         
       <div className="proj-heading">
-        <h2>Stuff I've Built</h2>
+        <h2>Cool Things I've Built :)</h2>
       </div>
       <div className="proj-content">
         <div className="project-boxes">
@@ -22,6 +24,20 @@ const Projects = () => {
             <b></b>
             <p id="code">
                 <a href="https://devpost.com/software/vibescope" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={faGithub} />
+                </a>
+            </p>
+          </div>
+          <div className="project-box">
+            <p id="proj-name">askAMAZON</p>
+            <p>• Developing a web and iOS application that can extract data from Amazon’s product reviews and run sentiment analysis
+            </p>
+            <b></b>
+            <p>• Integrating a chatbot powered by Generative-AI into a Chrome extension, designed to fetch real-time information from the
+            in house built web-scraper powered by Node.js, powered by a React.js front-end.</p>
+            <b></b>
+            <p id="code">
+                <a href="https://github.com/akankshd/askamazon" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faGithub} />
                 </a>
             </p>
@@ -59,7 +75,10 @@ const Projects = () => {
           
         </div>
       </div>
+
+
     </section>
+    
   );
 };
 

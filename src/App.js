@@ -6,10 +6,13 @@ import { faInstagram, faTwitter, faLinkedinIn, faGithub} from '@fortawesome/free
 import ExpSection from './ExpSection'
 import Projects from './Projects'
 import { Helmet } from "react-helmet";
+
 function App() {
 
   return (
+    
     <div>
+      <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       <div className="header">
         <nav>
         <Helmet><title>Akanksh</title>
@@ -37,19 +40,18 @@ function App() {
       <div className="intro">
         <h1 className="textIntro">Hi, I'm Akanksh</h1>
         <div className="social-icons">
+        <a href="https://www.linkedin.com/in/akankshd/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faLinkedinIn} />
+          </a>
+          <a href="https://github.com/akankshd" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faGithub} />
+        </a>
           <a href="https://www.instagram.com/akanksh_d/" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
           <a href="https://twitter.com/akankshd3" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faTwitter} />
           </a>
-          <a href="https://www.linkedin.com/in/akankshsuhas/" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faLinkedinIn} />
-
-          </a>
-          <a href="https://github.com/akankshd" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faGithub} />
-        </a>
         </div>
         <button class="resume-button" onclick="">
           <Link to="section my-box" smooth={true} offset={0} duration={600}>
@@ -66,11 +68,11 @@ function App() {
           <h2 id="about">About Me</h2>
           <h1 className="inside-text">Nice to meet you!</h1>
           <p id="about-text">
-            Hello, I'm Akanksh, presently in my second year at the University of California, Riverside. I'm working towards a career in software engineering, with a particular interest in machine learning and its applications in business. My aptitude for problem-solving has been evident from a young age, and every project I take on presents me with fresh challenges to overcome.
+            Hello, I'm Akanksh, presently in my junior year at the University of California, Riverside. I'm working towards a career in software engineering, with a particular interest in machine learning and its applications in business. My aptitude for problem-solving has been evident from a young age, and every project I take on presents me with fresh challenges to overcome.
           </p>
 
         <p id="about-text">
-          Beyond my technical pursuits, I have a passion for photography and exploring new destinations, nurturing my aspiration to eventually experience the world in its entirety.
+          Beyond my technical pursuits, I have a passion for photography and exploring new destinations, nurturing my aspiration to eventually experience the world in its entirety. 
         </p>
         <button class="resume-button" onclick="">
           <Link to="exp" smooth={true} offset={0} duration={600}>

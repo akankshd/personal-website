@@ -16,6 +16,12 @@ const ExperiencesSection = () => {
             
             <h1 className="inside-text"></h1>
             <div className="button-list">
+            <button
+                className={`company-button ${selectedCompany === "Company Z" ? 'active' : ''}`}
+                onClick={() => handleCompanyClick("Company Z")}
+              >
+                Alaska Airlines
+              </button>
               <button
                 className={`company-button ${selectedCompany === "Company A" ? 'active' : ''}`}
                 onClick={() => handleCompanyClick("Company A")}
@@ -26,7 +32,7 @@ const ExperiencesSection = () => {
                 className={`company-button ${selectedCompany === "Company B" ? 'active' : ''}`}
                 onClick={() => handleCompanyClick("Company B")}
               >
-                UCR Research
+              InternConnect
               </button>
               <button
                 className={`company-button ${selectedCompany === "Company C" ? 'active' : ''}`}
@@ -34,16 +40,39 @@ const ExperiencesSection = () => {
               >
                 Design@UCR
               </button>
-              <button
+              {/* <button
                 className={`company-button ${selectedCompany === "Company D" ? 'active' : ''}`}
                 onClick={() => handleCompanyClick("Company D")} 
               >
-                TBD
-              </button>
+                S2025
+              </button> */}
             </div>
           </div>
           <div className="description-wrapper">
-            
+          {selectedCompany === "Company Z" && (
+              <p className="description">
+              <p className="role">
+                Software Engineer Intern @ <span className="role-heading">Alaska Airlines</span>
+              </p>
+                June 2024 - September 2024                
+                <p></p>
+  • Spearheaded the development of a check-in feature for Alaska Airlines' website and mobile app using <strong>React.js</strong> and <strong>Go</strong>, resulting
+  in a 10% reduction in check-in time across <strong>30,000</strong> check-ins. <br></br>
+  • Engineered the front-end for a new dynamic seat-selection map for Alaska Airlines' website using <strong>React.js</strong> and <strong>TypeScript</strong>,
+  streamlining customer access to seat maps and contributing to a projected <strong>15%</strong> increase in seat selection revenue for Q3. <br></br>
+  • Developed and optimized a flight status notification system using <strong>Node.js</strong> and AWS, improving real-time updates for customers
+  and reducing notification delays by <strong>20%</strong>, enhancing the overall user experience on Alaska Airlines’ digital platforms. <br></br>
+  • Developed an AI-powered chatbot for Alaska Airlines using LLMs, automating customer support tasks and reducing service
+  workload by 25%.
+<p></p>
+
+
+                <span className="skills-heading">Tech Stack:</span>
+<span className="backend"> Backend: Go, NodeJS, SQL, AWS</span>, 
+<span className="frontend"> Frontend: ReactJS, VueJS, Typescript</span>
+              </p>
+              
+            )}
             {selectedCompany === "Company A" && (
               <p className="description">
               <p className="role">
@@ -61,15 +90,15 @@ const ExperiencesSection = () => {
             {selectedCompany === "Company B" && (
               <p className="description">
                 <p className="role">
-                  AI Research Intern @ <span className="role-heading">UC Riverside</span>
+                  Co-Founder @ <span className="role-heading">InternConnect</span>
                 </p>
-                 August 2023 - Present
+                 June 2024 - Present
                  <p></p>
-                 • Conducted in-depth research on counterfeit medication, contributing to a project to combat adulterated medications.
+                 • Developing a social media platform designed to help interns discover and enjoy exciting experiences in their temporary homes abroad.
                  <br></br>
-                 • Developed algorithms and implemented computer vision techniques to automatically identify and categorize sphere locations and colors on the CandyCodes.
+                 • Building in React and React Native
                   <p></p>
-                  <span className="skills-heading">Skills:</span> Python, Pytorch
+                  <span className="skills-heading">Skills:</span> ReactJS, React Native, Typescript, NodeJS
                   
               </p>
             )}
@@ -78,30 +107,25 @@ const ExperiencesSection = () => {
                 <p className="role">
                   VP of Web Development @ <span className="role-heading">Design@UCR</span>
                 </p>
-                March 2023 - Present
-                <p></p>
-                • Developed and managed the official website for UC Riverside's UI/UX club utilizing Next.js and React.js
-                <br></br>
-                • Integrated third-party APIs and libraries to add features such as event calendars, social media feeds, and contact forms, enriching the website's functionality.
-                <p></p>
-                <span className="skills-heading">Skills:</span> Next,js, React.js, AWS
-              </p>
-            )}
-            {selectedCompany === "Company D" && (
-              <p className="description">
-                <p className="role">
-                  VP of Web Development @ <span className="role-heading">Design@UCR</span>
+                March 2023 - June 2024
+                <p>
+                  • Developed and managed the official website for UC Riverside's UI/UX club using Next.js and React.js – 
+                  <a 
+                  href="https://designatucr.com" 
+                  target="_blank" 
+                  style={{ color: 'gold', textDecoration: 'none' }}
+                >
+                  designatucr.com
+                </a>
                 </p>
-                March 2023 - Present
-                <p></p>
-                • Developed and managed the official website for UC Riverside's UI/UX club utilizing Next.js and React.js
-                <br></br>
-                • Integrated third-party APIs and libraries to add features such as event calendars, social media feeds, and contact forms, enriching the website's functionality.
-                <p></p>
-                <span className="skills-heading">Skills:</span> Next,js, React.js, AWS
-                <p></p>
+                <span className="skills-heading">Skills:</span> Next,js, React.js
               </p>
             )}
+            {/* {selectedCompany === "Company D" && (
+              <p className="description">
+                Summer 2025
+              </p>
+            )} */}
              <Link to="proj"smooth={true} offset={0} duration={600} className="exp-button">
               projects ⬇
             </Link>
